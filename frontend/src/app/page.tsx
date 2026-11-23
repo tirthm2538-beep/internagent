@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { 
   FileText, 
   Sparkles, 
@@ -80,6 +81,21 @@ export default function Home() {
             >
               API Docs <ExternalLink className="w-3 h-3" />
             </a>
+
+            <div className="flex items-center gap-2">
+              <Link
+                href="/login"
+                className="text-xs font-medium text-slate-300 hover:text-white px-3 py-1.5 rounded-lg hover:bg-slate-800 transition-colors"
+              >
+                Sign In
+              </Link>
+              <Link
+                href="/signup"
+                className="text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 px-3.5 py-1.5 rounded-lg transition-colors shadow-md shadow-indigo-600/20"
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
         </div>
       </header>
@@ -104,14 +120,14 @@ export default function Home() {
           </p>
 
           <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
-            <button
-              onClick={() => alert("Upload Resume module arriving in Step 2 / Step 3!")}
+            <Link
+              href="/dashboard"
               className="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition-all shadow-lg shadow-indigo-600/25 flex items-center gap-2"
             >
               <FileText className="w-4 h-4" />
-              Upload Resume (Preview)
+              Upload Resume (Dashboard)
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
             <a
               href="#architecture"
               className="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-semibold text-sm transition-all flex items-center gap-2"
