@@ -1,0 +1,21 @@
+# Root gitignore
+.DS_Store
+Thumbs.db
+*.log
+
+# Backend
+backend/venv/
+backend/.env
+backend/**/__pycache__/
+backend/*.pyc
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.env*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
